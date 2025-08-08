@@ -1,0 +1,24 @@
+{
+  "name": "todo_list_backend",
+  "version": "1.0.0",
+  "description": "SENCILLO",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bemmoralesmora/Todo_list_backend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bemmoralesmora/Todo_list_backend/issues"
+  },
+  "homepage": "https://github.com/bemmoralesmora/Todo_list_backend#readme",
+  "dependencies": {
+    "cords": "^1.0.4",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0"
+  }
+}
