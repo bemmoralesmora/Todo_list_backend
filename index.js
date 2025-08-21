@@ -10,6 +10,7 @@ app.use(
       "*",
       "https://todo-list-six-nu-77.vercel.app",
       "https://todo-list-six-nu-77.vercel.app/pages/dashboard.html",
+      "https://bemmoralesmora.github.io/Todo_list/pages/dashboard.html",
     ],
     methods: ["GET", "POST", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
