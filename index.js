@@ -1,16 +1,32 @@
 require("dotenv").config();
-
-// importando el módulo express
+const cors = require("cors");
 const express = require("express");
-
 const app = express();
 
-app.get("/", (req, res) => {
-  res.send("Mi backEnd con ExpressJS");
-});
+// Habilitar CORS antes de las rutas
+app.use(
+  cors({
+    origin: [
+      "http://127.0.0.1:5500",
+      "http://localhost:5500",
+      "https://bemmoralesmora.github.io/Todo_list",
+    ],
+    methods: ["GET", "POST", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+  })
+);
 
+app.use(express.json());
+
+// Rutas
+const getTablas = require("./routes/get/obtenerTablas");
+const getTareas = require("./routes/get/obtenerTareas");
+
+app.use("/api", getTablas);
+app.use("/api", getTareas);
+
+// Servidor
 const PORT = process.env.PORT || 3000;
-
 app.listen(PORT, () => {
-  console.log(`Servidor: http://localhost:${PORT}`);
+  console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });
